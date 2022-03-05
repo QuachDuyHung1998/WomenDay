@@ -9,17 +9,17 @@
 		<link rel="stylesheet" type="text/css" href="./style.css">
 		<script>document.documentElement.className = "js";
 
-var supportsCssVars = function supportsCssVars() {
-	var e,
-		t = document.createElement("style");
-	return t.innerHTML = "root: { --tmp-var: bold; }", document.head.appendChild(t), e = !!(window.CSS && window.CSS.supports && window.CSS.supports("font-weight", "var(--tmp-var)")), t.parentNode.removeChild(t), e;
-};
+		var supportsCssVars = function supportsCssVars() {
+			var e,
+				t = document.createElement("style");
+			return t.innerHTML = "root: { --tmp-var: bold; }", document.head.appendChild(t), e = !!(window.CSS && window.CSS.supports && window.CSS.supports("font-weight", "var(--tmp-var)")), t.parentNode.removeChild(t), e;
+		};
 
-supportsCssVars() || alert("Please view this demo in a modern browser that supports CSS Variables.");</script>
+		supportsCssVars() || alert("Xem bằng máy tính đi nhó, điện thoại hiển thị không được đẹp cho lắm, không cho xem :))");</script>
 	</head>
 	<body class="demo-1 loading">
 		<main>
-			<div class="message">Em xem trên laptop để có trải nghiệm tốt hơn nhé.</div>
+			<div class="message">Xem bằng máy tính đi nhó, điện thoại hiển thị không được đẹp cho lắm, không cho xem :))</div>
 			<div class="frame">
 			</div>
 			<div class="content">
@@ -46,6 +46,15 @@ supportsCssVars() || alert("Please view this demo in a modern browser that suppo
         <svg class="cursor" width="80" height="80" viewBox="0 0 80 80">
 			<circle class="cursor__inner" cx="40" cy="40" r="20"></circle>
 		</svg>
+		<button id="btn-play-audio" style="display: none;" onclick="play()">Play Audio</button>
 		<script src="./script.js"></script>
+		<script>
+			function play() {
+				let audio = new Audio('./NGÀY ĐẦU TIÊN - ĐỨC PHÚC.mp3');
+				audio.autoplay = true;
+				audio.loop = true;
+			}
+			document.getElementById('btn-play-audio').click();
+		</script>
 	</body>
 </html>
