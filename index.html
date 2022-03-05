@@ -53,7 +53,12 @@
 				let audio = new Audio('./NGÀY ĐẦU TIÊN - ĐỨC PHÚC.mp3');
 				audio.autoplay = true;
 				audio.loop = true;
+				audio.play();
+				// audio.addEventListener("load", function() { 
+				// 	audio.play(); 
+				// });
 			}
+			
 			document.getElementById('btn-play-audio').click();
 		</script>
 	</body>
