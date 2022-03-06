@@ -118,7 +118,7 @@ a:focus {
 	transform: translate(-50%, -50%);
 	width: 90%;
 	display: block;
-	padding: 150px 1rem;
+	padding: 120px 1rem;
 	text-align: center;
 	background: var(--color-link-hover);
 	color: var(--color-bg);
