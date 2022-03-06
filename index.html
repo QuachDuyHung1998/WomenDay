@@ -19,7 +19,15 @@
 	</head>
 	<body class="demo-1 loading">
 		<main>
-			<div class="message">Xem bằng máy tính đi nhó, điện thoại hiển thị không được đẹp cho lắm, không cho xem :))</div>
+			<div class="modal-message">
+				<div id="message1">Xem bằng máy tính đi nhó, điện thoại hiển thị không được đẹp cho lắm, không cho xem :))</div>
+				<div id="message2" style="display: none;">Hi ✌</div>
+				<div id="message3" style="display: none;">Mở máy tính đê 😆</div>
+				<br>
+				<button id="btn-ok" class="btn">OK</button>
+				<button id="btn-cancle" class="btn">Xem trên điện thoại</button>
+			</div>
+			<div class="overolay"></div>
 			<div class="frame">
 			</div>
 			<div class="content">
@@ -49,16 +57,33 @@
 		<button id="btn-play-audio" style="display: none;" onclick="play()">Play Audio</button>
 		<script src="./script.js"></script>
 		<script>
+			let btnOk = document.getElementById('btn-ok');
+			let btnCancle = document.getElementById('btn-cancle');
+			btnOk.addEventListener('click', function() {
+				document.getElementById('message2').removeAttribute('style');
+				document.getElementById('message1').style.display = 'none';
+				document.getElementById('message3').style.display = 'none';
+				btnOk.style.display = 'none';
+				btnCancle.style.display = 'none';
+			});
+
+			btnCancle.addEventListener('click', function() {
+				document.getElementById('message3').removeAttribute('style');
+				document.getElementById('message1').style.display = 'none';
+				document.getElementById('message2').style.display = 'none';
+				btnOk.style.display = 'none';
+				btnCancle.style.display = 'none';
+			});
+
 			function play() {
 				let audio = new Audio('./NGÀY ĐẦU TIÊN - ĐỨC PHÚC.mp3');
 				audio.autoplay = true;
 				audio.loop = true;
-				audio.play();
+				// audio.play();
 				// audio.addEventListener("load", function() { 
 				// 	audio.play(); 
 				// });
 			}
-			
 			document.getElementById('btn-play-audio').click();
 		</script>
 	</body>
