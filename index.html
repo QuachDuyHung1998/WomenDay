@@ -54,6 +54,7 @@
         <svg class="cursor" width="80" height="80" viewBox="0 0 80 80">
 			<circle class="cursor__inner" cx="40" cy="40" r="20"></circle>
 		</svg>
+		<audio id="audio" controls src="./NGÀY ĐẦU TIÊN - ĐỨC PHÚC.mp3"></audio>
 		<button id="btn-play-audio" style="display: none;" onclick="play()">Play Audio</button>
 		<script src="./script.js"></script>
 		<script>
@@ -76,7 +77,8 @@
 			});
 
 			function play() {
-				let audio = new Audio('./NGÀY ĐẦU TIÊN - ĐỨC PHÚC.mp3');
+				// let audio = new Audio('./NGÀY ĐẦU TIÊN - ĐỨC PHÚC.mp3');
+				let audio = document.getElementById('audio');
 				audio.autoplay = true;
 				audio.loop = true;
 				// audio.play();
